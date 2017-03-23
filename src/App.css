@@ -1,0 +1,78 @@
+.App {
+  font-size: 1.8rem;
+}
+
+.App-logo {
+  /*animation: App-logo-spin infinite 3s linear;*/
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.messages-container {
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.chat-form {
+  position: fixed;
+  bottom: 0px;
+  left: 20%;
+}
+
+.message {
+  width: 100%;
+  text-align: left;
+  margin: 10px 4px;
+}
+
+.message.user {
+  clear: left;
+  float: left;
+  word-wrap: break-word;
+}
+
+.message.jenny {
+  clear: right;
+  float: right;
+  text-align: right;
+  word-wrap: break-word;
+}
+
+.message .author {
+  font-weight: bold;
+}
+
+.message .message-body {
+  max-width: 500px;
+  text-align: left;
+  padding: 15px;
+}
+
+.message.jenny .message-body {
+  float: right;
+  background-color: #0084ff;
+  color: white;
+  padding: 15px;
+  border-radius: 30px 0px 30px 30px;
+}
+
+.message.user .message-body {
+  background-color: rgb(241, 241, 241);
+  border-radius: 0px 30px 30px 30px;
+}
