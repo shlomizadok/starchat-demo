@@ -27,15 +27,16 @@ class App extends Component {
         self.setState({ showTyping: false });
         ajax
         .post('/get_next_response')
-        .send({user_id: '1234', user_input: {text: message} })
+        .send({conversation_id: '1234', user_input: {text: message} })
         .withCredentials()
         .set('Accept', 'application/json')
         .end(function (err, res) {
           if (err) {
             self.handleJennyResponse('Got an error. Please talk with a human operator calling 800 000 000');
           } else {
+            console.log(res)
             if (res && res.body) {
-              self.handleJennyResponse(res.body.bubble);
+              self.handleJennyResponse(res.body[0].bubble);
             }
 
             if (res.statusCode === 204) {
