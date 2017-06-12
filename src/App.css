@@ -26,13 +26,12 @@
 
 .messages-container {
   height: 600px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .chat-form {
   position: fixed;
   bottom: 0px;
-  left: 20%;
 }
 
 .message {
