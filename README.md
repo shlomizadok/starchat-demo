@@ -1,14 +1,13 @@
 # Welcome!
 
-This is a client demo of *Chat, a scalable conversational engine for B2B applications.
+This is a client demo of StarChat, a scalable conversational engine for B2B applications.
 
 The demo client is a react application and was created with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## installation
 
-Assuming you have a *Chat docker container up and running with port 8888 exposed. If you don't, refer to [StarChat README](https://github.com/getjenny/starchat) to get docker-compose of *Chat engine.
-
-Run `npm install` to install node dependencies
+1. Have StarChat up and running on port 8888. If you don't know how to launch StarChat, please go to the official [StarChat Repository](https://github.com/getjenny/starchat) for instructions!
+2. Run `npm install` to install node dependencies
 
 ## Running
 
