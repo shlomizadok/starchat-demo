@@ -86,7 +86,7 @@ class App extends Component {
           </div>
           <form className="chat-form">
             <FormGroup controlId="formBasicText">
-              <ControlLabel>How may I help?</ControlLabel>
+              <ControlLabel>Questions about StarChat (install, contribute, licence...)?</ControlLabel>
               <FormControl
                bsSize="large"
                type="text"
