@@ -77,27 +77,26 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>GetJenny demo</h2>
         </div>
-        <div className="container messages-container" id="messages-container">
+        <div className="messages-container" id="messages-container">
           <MessageList messages={this.state.messages} />
         </div>
-        <div className="container">
-          <div className={this.state.showTyping ? 'show' : 'hide'}>Jenny is typing</div>
+        <div className="App-footer">
+          <div className="jenny-typing">
+            <div className={this.state.showTyping ? 'show' : 'hide'}>Jenny is typing</div>
+          </div>
+          <form className="chat-form">
+            <FormGroup controlId="formBasicText">
+              <ControlLabel>How may I help?</ControlLabel>
+              <FormControl
+               bsSize="large"
+               type="text"
+               value={this.state.chatValue}
+               placeholder="Type a message..."
+               onKeyPress={this.handleKeyPress}
+               onChange={this.handleChange}/>
+            </FormGroup>
+          </form>
         </div>
-        <form className="chat-form container">
-          <FormGroup
-            controlId="formBasicText"
-          >
-          <ControlLabel>How may I help?</ControlLabel>
-          <FormControl
-           bsSize="large"
-            type="text"
-            value={this.state.chatValue}
-            placeholder="Type a message..."
-            onKeyPress={this.handleKeyPress}
-            onChange={this.handleChange}
-          />
-        </FormGroup>
-        </form>
       </div>
     );
   }

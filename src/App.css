@@ -1,22 +1,56 @@
 .App {
   font-size: 1.8rem;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  display: list-item;
 }
 
 .App-logo {
   /*animation: App-logo-spin infinite 3s linear;*/
+  padding-top: 5px;
   height: 80px;
 }
 
 .App-header {
-  background-color: #222;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
   height: 150px;
-  padding: 20px;
-  color: white;
+  width: 100%;
+  padding-top: 0px;
+  padding-left: 0px ;
+  padding-bottom: 0px;
+  padding-right: 0px;
+
+  align-items: center;
   text-align: center;
+  background: #222;
+  display: list-item;
+}
+
+.App-header h2 {
+  color: white;
+}
+
+.App-footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+
+  height: 20%;
+  width: 100%;
+
+  display: list-item;
+  align-items: center;
+  background: transparent;
 }
 
 .App-intro {
+  position: absolute;
   font-size: large;
+  display: list-item;
 }
 
 @keyframes App-logo-spin {
@@ -25,14 +59,31 @@
 }
 
 .messages-container {
-  height: 600px;
+  top: 180px;
+  min-height: 20%;
+  max-height: 55%;
+  width: 100%;
   overflow-y: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: transparent;
+  position: fixed;
+  display: list-item;
 }
 
 .chat-form {
-  position: fixed;
+  height: 80%;
+  width: 80%;
+  position: absolute;
   bottom: 0px;
 }
+
+.jenny-typing {
+  height: 80%;
+  width: 80%;
+  position: static;
+}
+
 
 .message {
   width: 100%;
