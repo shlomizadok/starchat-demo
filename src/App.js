@@ -32,7 +32,7 @@ class App extends Component {
         .set('Accept', 'application/json')
         .end(function (err, res) {
           if (err) {
-            self.handleJennyResponse('Got an error. Please talk with a human operator calling 800 000 000');
+            self.handleJennyResponse('Error. Please check StarChat is running correctly (see https://getjenny.github.io/starchat-doc/#test-the-installation)');
           } else {
             console.log(res)
             if (res && res.body) {
@@ -40,7 +40,7 @@ class App extends Component {
             }
 
             if (res.statusCode === 204) {
-              self.handleJennyResponse("Didn't get you (but I'm learning!). Try to rephrase?");
+              self.handleJennyResponse("Sorry, I don't understand what you are saying -I still have limited capacity. Please try with 'get test state' to test the installation or ask 'how to install'");
             }
           }
         });
