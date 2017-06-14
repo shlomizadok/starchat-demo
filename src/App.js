@@ -86,12 +86,12 @@ class App extends Component {
           </div>
           <form className="chat-form">
             <FormGroup controlId="formBasicText">
-              <ControlLabel>Questions about StarChat (install, contribute, licence...)?</ControlLabel>
+              <ControlLabel>Questions about StarChat?</ControlLabel>
               <FormControl
                bsSize="large"
                type="text"
                value={this.state.chatValue}
-               placeholder="Type a message..."
+               placeholder="E.g. How to install/contribute? Licence?"
                onKeyPress={this.handleKeyPress}
                onChange={this.handleChange}/>
             </FormGroup>
