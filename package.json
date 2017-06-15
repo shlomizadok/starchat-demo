@@ -10,7 +10,8 @@
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.8",
     "react-dom": "^15.4.2",
-    "superagent": "^3.5.1"
+    "superagent": "^3.5.1",
+    "react-render-html": "^0.1.6"
   },
   "scripts": {
     "start": "react-scripts start",
