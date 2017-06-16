@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import renderHTML from 'react-render-html';
 
 const Message = (props) => {
   return (
@@ -7,7 +8,7 @@ const Message = (props) => {
         {props.author}
       </div>
       <div className="message-body">
-        {props.message}
+          {renderHTML(props.message)}
       </div>
     </div>
   );

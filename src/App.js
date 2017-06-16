@@ -32,7 +32,7 @@ class App extends Component {
         .set('Accept', 'application/json')
         .end(function (err, res) {
           if (err) {
-            self.handleJennyResponse('Got an error. Please talk with a human operator calling 800 000 000');
+            self.handleJennyResponse('Error. Please check StarChat is running correctly (see https://getjenny.github.io/starchat-doc/#test-the-installation)');
           } else {
             console.log(res)
             if (res && res.body) {
@@ -40,7 +40,7 @@ class App extends Component {
             }
 
             if (res.statusCode === 204) {
-              self.handleJennyResponse("Didn't get you (but I'm learning!). Try to rephrase?");
+              self.handleJennyResponse("Sorry, I don't understand what you are saying -I still have limited capacity. Please try with 'get test state' to test the installation or ask 'how to install'");
             }
           }
         });
@@ -75,29 +75,28 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>GetJenny demo</h2>
+          <h2>StarChat: An Open Source conversational engine for B2B applications.</h2>
         </div>
-        <div className="container messages-container" id="messages-container">
+        <div className="messages-container" id="messages-container">
           <MessageList messages={this.state.messages} />
         </div>
-        <div className="container">
-          <div className={this.state.showTyping ? 'show' : 'hide'}>Jenny is typing</div>
+        <div className="App-footer">
+          <div className="jenny-typing">
+            <div className={this.state.showTyping ? 'show' : 'hide'}>Jenny is typing</div>
+          </div>
+          <form className="chat-form">
+            <FormGroup controlId="formBasicText">
+              <ControlLabel>Questions about StarChat?</ControlLabel>
+              <FormControl
+               bsSize="large"
+               type="text"
+               value={this.state.chatValue}
+               placeholder="E.g. How to install/contribute? Licence?"
+               onKeyPress={this.handleKeyPress}
+               onChange={this.handleChange}/>
+            </FormGroup>
+          </form>
         </div>
-        <form className="chat-form container">
-          <FormGroup
-            controlId="formBasicText"
-          >
-          <ControlLabel>How may I help?</ControlLabel>
-          <FormControl
-           bsSize="large"
-            type="text"
-            value={this.state.chatValue}
-            placeholder="Type a message..."
-            onKeyPress={this.handleKeyPress}
-            onChange={this.handleChange}
-          />
-        </FormGroup>
-        </form>
       </div>
     );
   }
