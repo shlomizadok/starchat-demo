@@ -75,7 +75,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>GetJenny demo</h2>
+          <h2>StarChat: An Open Source conversational engine for B2B applications.</h2>
         </div>
         <div className="messages-container" id="messages-container">
           <MessageList messages={this.state.messages} />
